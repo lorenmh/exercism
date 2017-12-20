@@ -1,5 +1,8 @@
 #include "gigasecond.h"
 
-boost::posix_time::ptime gigasecond::advance(boost::posix_time::ptime ptime) {
-	return ptime + boost::posix_time::time_duration(0, 0, 1e9);
+using boost::posix_time::ptime;
+using boost::posix_time::time_duration;
+
+ptime gigasecond::advance(ptime time) {
+	return time + time_duration(0, 0, 1e9);
 }
